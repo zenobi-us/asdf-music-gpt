@@ -1,6 +1,6 @@
 <div align="center">
 
-# asdf-music-gpt [![Build](https://github.com/airtonix/asdf-music-gpt/actions/workflows/build.yml/badge.svg)](https://github.com/airtonix/asdf-music-gpt/actions/workflows/build.yml) [![Lint](https://github.com/airtonix/asdf-music-gpt/actions/workflows/lint.yml/badge.svg)](https://github.com/airtonix/asdf-music-gpt/actions/workflows/lint.yml)
+# asdf-music-gpt [![Build](https://github.com/zenobi-us/asdf-music-gpt/actions/workflows/build.yml/badge.svg)](https://github.com/zenobi-us/asdf-music-gpt/actions/workflows/build.yml) [![Lint](https://github.com/zenobi-us/asdf-music-gpt/actions/workflows/lint.yml/badge.svg)](https://github.com/zenobi-us/asdf-music-gpt/actions/workflows/lint.yml)
 
 [music-gpt](https://github.com/gabotechs/MusicGPT) plugin for the [asdf version manager](https://asdf-vm.com).
 
@@ -8,6 +8,8 @@
 
 # Contents
 
+- [asdf-music-gpt  ](#asdf-music-gpt--)
+- [Contents](#contents)
 - [Dependencies](#dependencies)
 - [Install](#install)
 - [Contributing](#contributing)
@@ -27,7 +29,7 @@ Plugin:
 ```shell
 asdf plugin add music-gpt
 # or
-asdf plugin add music-gpt https://github.com/airtonix/asdf-music-gpt.git
+asdf plugin add music-gpt https://github.com/zenobi-us/asdf-music-gpt.git
 ```
 
 music-gpt:
@@ -53,8 +55,8 @@ install & manage versions.
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
-[Thanks goes to these contributors](https://github.com/airtonix/asdf-music-gpt/graphs/contributors)!
+[Thanks goes to these contributors](https://github.com/zenobi-us/asdf-music-gpt/graphs/contributors)!
 
 # License
 
-See [LICENSE](LICENSE) © [Zeno Jiricek](https://github.com/airtonix/)
+See [LICENSE](LICENSE) © [Zeno Jiricek](https://github.com/zenobi-us/)
