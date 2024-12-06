@@ -5,7 +5,7 @@ set -euo pipefail
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for music-gpt.
 GH_REPO="https://github.com/gabotechs/MusicGPT"
 TOOL_NAME="music-gpt"
-TOOL_TEST="musicgpt --version"
+TOOL_TEST="musicgpt --help"
 
 fail() {
 	echo -e "asdf-$TOOL_NAME: $*"
