@@ -40,13 +40,23 @@ download_release() {
 	local version filename url
 	version="$1"
 	filename="$2"
+	os=$(get_machine_os)
+	arch=$(get_machine_arch)
+
+
 
 	# TODO: Adapt the release URL convention for music-gpt
-	url="$GH_REPO/archive/v${version}.tar.gz"
+    url="${GH_REPO}/releases/download/v${version}/${arch}-${os}.tar.gz"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
 }
+
+
+# aarch64-apple-darwin.tar.gz
+# x86_64-apple-darwin.tar.gz
+# x86_64-pc-windows-msvc.tar.gz
+# x86_64-unknown-linux-gnu.tar.gz
 
 install_version() {
 	local install_type="$1"
@@ -71,4 +81,20 @@ install_version() {
 		rm -rf "$install_path"
 		fail "An error occurred while installing $TOOL_NAME $version."
 	)
+}
+
+get_machine_os() {
+  local OS
+  OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+
+  case "${OS}" in
+  darwin*) echo "apple-darwin" ;;
+  linux*) echo "unknown-linux-gnu" ;;
+  windows*) echo "pc-windows-msvc" ;;
+  *) echo "${OS}" ;;
+  esac
+}
+
+get_machine_arch() {
+	uname -m
 }
